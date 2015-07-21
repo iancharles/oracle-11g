@@ -1,11 +1,11 @@
+NOTE: This is currently unfinished and will not work in its current form. This note will be removed once this has been successfully run.
 # Instant Oracle datase server
-A [Docker](https://www.docker.com/) [image](https://registry.hub.docker.com/u/wscherphof/oracle-12c/) with [Oracle Database 12c Enterprise Edition Release 12.1.0.2.0](http://www.oracle.com/technetwork/database/enterprise-edition/overview/index.html) running in [Oracle Linux 7](http://www.oracle.com/us/technologies/linux/overview/index.html)
+A [Docker](https://www.docker.com/) image with [Oracle Database 11g Enterprise Edition Release 11.2.0.1.0](http://www.oracle.com/technetwork/database/enterprise-edition/downloads/index.html) running in [CentOS 6.6](https://www.centos.org/)
 - Default ORCL database on port 1521
 
 ## Install
 1. [Install Docker](https://docs.docker.com/installation/#installation)
-1. `$ docker pull wscherphof/oracle-12c`
-2. That worked once, but the image was removed by Docker Support on Oracle's request, so you'll need to [build](https://github.com/wscherphof/oracle-12c#build) it yourself
+2. You can no longer pull Oracle images from the Docker Hub, so you'll need to [build](https://github.com/iancharles/oracle-11g#build) it yourself
 
 ## Run
 Create and run a container named orcl:
@@ -128,11 +128,11 @@ Should you want to modify & build your own image:
 
 2) Put the 2 zip files in the `step1` directory
 
-3) `cd` to the `oracle-12c` repo directory
+3) `cd` to the `oracle-11g` repo directory
 
-4) `$ docker build -t oracle-12c:step1 step1`
+4) `$ docker build -t oracle-11g:step1 step1`
 
-5) `$ docker run --privileged -ti --name step1 oracle-12c:step1 /bin/bash`
+5) `$ docker run --privileged -ti --name step1 oracle-11g:step1 /bin/bash`
 
 6) ` # /tmp/install/install` (takes about 5m)
 ```
@@ -164,12 +164,12 @@ As install user, execute the following script to complete the configuration.
 
 8) ` # exit` (the scripts mentioned are executed as part of the step2 build)
 
-9) `$ docker commit step1 oracle-12c:installed`
+9) `$ docker commit step1 oracle-11g:installed`
 
 #### Step 2
-1) `$ docker build -t oracle-12c:step2 step2`
+1) `$ docker build -t oracle-11g:step2 step2`
 
-2) `$ docker run --privileged -ti --name step2 oracle-12c:step2 /bin/bash`
+2) `$ docker run --privileged -ti --name step2 oracle-11g:step2 /bin/bash`
 
 3) ` # /tmp/create` (takes about 15m)
 ```
@@ -217,10 +217,10 @@ Create is done; commit the container now
 ```
 4) ` # exit`
 
-5) `$ docker commit step2 oracle-12c:created`
+5) `$ docker commit step2 oracle-11g:created`
 
 #### Step 3
-1) `$ docker build -t oracle-12c step3`
+1) `$ docker build -t oracle-11g step3`
 
 ## License
 [GNU Lesser General Public License (LGPL)](http://www.gnu.org/licenses/lgpl-3.0.txt) for the contents of this GitHub repo; for Oracle's database software, see their [Licensing Information](http://docs.oracle.com/database/121/DBLIC/toc.htm)
