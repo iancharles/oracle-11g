@@ -114,7 +114,7 @@ oracle.install.db.InstallEdition=EE
 #         are considered for install.
 # false : Value for 'optionalComponents' is not considered.
 #-------------------------------------------------------------------------------
-oracle.install.db.EEOptionsSelection=false
+#oracle.install.db.EEOptionsSelection=false
 
 #-------------------------------------------------------------------------------
 # This property is considered only if 'EEOptionsSelection' is set to true
@@ -133,7 +133,7 @@ oracle.install.db.EEOptionsSelection=false
 #              oracle.rdbms.partitioning:11.2.0.3.0 - Oracle Partitioning
 #              oracle.rdbms.rat:11.2.0.3.0 - Oracle Real Application Testing
 #-------------------------------------------------------------------------------
-oracle.install.db.optionalComponents=
+#oracle.install.db.optionalComponents=
 
 ###############################################################################
 #                                                                             #
@@ -157,7 +157,7 @@ oracle.install.db.DBA_GROUP=dba
 # The OPER_GROUP is the OS group which is to be granted OSOPER privileges.
 # The value to be specified for OSOPER group is optional.
 #------------------------------------------------------------------------------
-oracle.install.db.OPER_GROUP=oper
+oracle.install.db.OPER_GROUP=dba
 
 #-------------------------------------------------------------------------------
 # Specify the cluster node names selected during the installation.
@@ -173,7 +173,7 @@ oracle.install.db.CLUSTER_NODES=
 #
 # If left blank, it will be assumed to be false.
 #------------------------------------------------------------------------------
-oracle.install.db.isRACOneInstall=false
+#oracle.install.db.isRACOneInstall=false
 
 #------------------------------------------------------------------------------
 # Specify the name for RAC One Node Service.
@@ -364,19 +364,6 @@ oracle.install.db.config.asm.diskGroup=
 #-------------------------------------------------------------------------------
 oracle.install.db.config.asm.ASMSNMPPassword=
 
-#------------------------------------------------------------------------------
-# Specify the My Oracle Support Account Username.
-#
-#  Example   : MYORACLESUPPORT_USERNAME=abc@oracle.com
-#------------------------------------------------------------------------------
-MYORACLESUPPORT_USERNAME=
-
-#------------------------------------------------------------------------------
-# Specify the My Oracle Support Account Username password.
-#
-# Example    : MYORACLESUPPORT_PASSWORD=password
-#------------------------------------------------------------------------------
-MYORACLESUPPORT_PASSWORD=
 
 #------------------------------------------------------------------------------
 # Specify whether to enable the user to set the password for
@@ -428,44 +415,3 @@ PROXY_USER=
 # Example    : PROXY_PWD=password
 #------------------------------------------------------------------------------
 PROXY_PWD=
-
-#------------------------------------------------------------------------------
-# Specify the proxy realm.
-#
-# Example    : PROXY_REALM=metalink
-#------------------------------------------------------------------------------
-PROXY_REALM=
-#------------------------------------------------------------------------------
-# Specify the Oracle Support Hub URL.
-#
-# Example    : COLLECTOR_SUPPORTHUB_URL=https://orasupporthub.company.com:8080/
-#------------------------------------------------------------------------------
-COLLECTOR_SUPPORTHUB_URL=
-
-#------------------------------------------------------------------------------
-# Specify the auto-updates option. It can be one of the following:
-# a.MYORACLESUPPORT_DOWNLOAD
-# b.OFFLINE_UPDATES
-# c.SKIP_UPDATES
-#------------------------------------------------------------------------------
-oracle.installer.autoupdates.option=SKIP_UPDATES
-#------------------------------------------------------------------------------
-# In case MYORACLESUPPORT_DOWNLOAD option is chosen, specify the location where
-# the updates are to be downloaded.
-# In case OFFLINE_UPDATES option is chosen, specify the location where the updates
-# are present.
-oracle.installer.autoupdates.downloadUpdatesLoc=
-#------------------------------------------------------------------------------
-# Specify the My Oracle Support Account Username which has the patches download privileges
-# to be used for software updates.
-#  Example   : AUTOUPDATES_MYORACLESUPPORT_USERNAME=abc@oracle.com
-#------------------------------------------------------------------------------
-AUTOUPDATES_MYORACLESUPPORT_USERNAME=
-
-#------------------------------------------------------------------------------
-# Specify the My Oracle Support Account Username password which has the patches download privileges
-# to be used for software updates.
-#
-# Example    : AUTOUPDATES_MYORACLESUPPORT_PASSWORD=password
-#------------------------------------------------------------------------------
-AUTOUPDATES_MYORACLESUPPORT_PASSWORD=
