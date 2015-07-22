@@ -1,4 +1,5 @@
-NOTE: This is currently unfinished and will not work in its current form. This note will be removed once this has been successfully run.
+NOTE: This has been successfully run but has not been fully tested. Some bugs may exist. Here be dragons, etc.
+
 # Instant Oracle datase server
 A [Docker](https://www.docker.com/) image with [Oracle Database 11g Enterprise Edition Release 11.2.0.1.0](http://www.oracle.com/technetwork/database/enterprise-edition/downloads/index.html) running in [CentOS 6.6](https://www.centos.org/)
 - Default ORCL database on port 1521
