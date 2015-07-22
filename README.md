@@ -170,12 +170,12 @@ Successfully Setup Software.
 
 3) ` # /tmp/create` (takes about 15m)
 ```
-Tue Sep 16 11:07:30 UTC 2014
+Wed Jul 22 16:37:18 UTC 2015
 Creating database...
 
-SQL*Plus: Release 12.1.0.2.0 Production on Tue Sep 16 11:07:30 2014
+SQL*Plus: Release 11.2.0.1.0 Production on Wed Jul 22 16:37:18 2015
 
-Copyright (c) 1982, 2014, Oracle.  All rights reserved.
+Copyright (c) 1982, 2009, Oracle.  All rights reserved.
 
 Connected to an idle instance.
 
@@ -183,11 +183,11 @@ File created.
 
 ORACLE instance started.
 
-Total System Global Area 1073741824 bytes
-Fixed Size		    2932632 bytes
-Variable Size		  721420392 bytes
-Database Buffers	  343932928 bytes
-Redo Buffers		    5455872 bytes
+Total System Global Area 1068937216 bytes
+Fixed Size		    2220200 bytes
+Variable Size		  616566616 bytes
+Database Buffers	  444596224 bytes
+Redo Buffers		    5554176 bytes
 
 Database created.
 
@@ -197,19 +197,56 @@ Tablespace created.
 
 Tablespace created.
 
-Disconnected from Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
-With the Partitioning, OLAP, Advanced Analytics and Real Application Testing options
+Disconnected from Oracle Database 11g Enterprise Edition Release 11.2.0.1.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
 
-Tue Sep 16 11:07:50 UTC 2014
+Wed Jul 22 16:37:44 UTC 2015
 Running catalog.sql...
 
-Tue Sep 16 11:08:51 UTC 2014
+Wed Jul 22 16:38:27 UTC 2015
 Running catproc.sql...
 
-Tue Sep 16 11:19:38 UTC 2014
+Wed Jul 22 16:44:14 UTC 2015
 Running pupbld.sql...
 
-Tue Sep 16 11:19:38 UTC 2014
+Finalizing install and shutting down the database...
+
+SQL*Plus: Release 11.2.0.1.0 Production on Wed Jul 22 16:44:15 2015
+
+Copyright (c) 1982, 2009, Oracle.  All rights reserved.
+
+
+Connected to:
+Oracle Database 11g Enterprise Edition Release 11.2.0.1.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
+
+BEGIN dbms_xdb_config.sethttpsport(5500); END;
+
+      *
+ERROR at line 1:
+ORA-06550: line 1, column 7:
+PLS-00201: identifier 'DBMS_XDB_CONFIG.SETHTTPSPORT' must be declared
+ORA-06550: line 1, column 7:
+PL/SQL: Statement ignored
+
+
+BEGIN dbms_xdb_config.sethttpport(8080); END;
+
+      *
+ERROR at line 1:
+ORA-06550: line 1, column 7:
+PLS-00201: identifier 'DBMS_XDB_CONFIG.SETHTTPPORT' must be declared
+ORA-06550: line 1, column 7:
+PL/SQL: Statement ignored
+
+
+Database closed.
+Database dismounted.
+ORACLE instance shut down.
+Disconnected from Oracle Database 11g Enterprise Edition Release 11.2.0.1.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
+
+Wed Jul 22 16:44:24 UTC 2015
 Create is done; commit the container now
 ```
 4) ` # exit`
