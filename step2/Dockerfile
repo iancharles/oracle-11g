@@ -1,10 +1,10 @@
-FROM oracle-12c:installed
+FROM oracle-11g:installed
 MAINTAINER Wouter Scherphof <wouter.scherphof@gmail.com>
 
 RUN rm -rf /tmp/install
 
 ENV ORACLE_SID ORCL
-ENV ORACLE_HOME $ORACLE_BASE/product/12.1.0/dbhome_1
+ENV ORACLE_HOME $ORACLE_BASE/product/11.2.0/dbhome_1
 ENV PATH $ORACLE_HOME/bin:$PATH
 
 RUN $ORACLE_HOME/root.sh
