@@ -1,4 +1,4 @@
-FROM wscherphof/oracle-linux-7
+FROM centos:6.6
 MAINTAINER Wouter Scherphof <wouter.scherphof@gmail.com>
 
 ADD linuxamd64_12102_database_1of2.zip /tmp/install/linuxamd64_12102_database_1of2.zip
@@ -7,7 +7,7 @@ RUN yum -y install unzip binutils compat-libcap1 compat-libstdc++-33 compat-libs
 RUN cd /tmp/install && unzip linuxamd64_12102_database_1of2.zip && unzip linuxamd64_12102_database_2of2.zip && rm *.zip
 
 RUN groupadd -g 54321 oinstall && groupadd -g 54322 dba
-RUN userdel oracle && rm -rf /home/oracle && rm /var/spool/mail/oracle
+#RUN userdel oracle && rm -rf /home/oracle && rm /var/spool/mail/oracle
 RUN useradd -m -u 54321 -g oinstall -G dba oracle
 RUN echo "oracle:oracle" | chpasswd
 
@@ -22,7 +22,7 @@ ADD sysctl.conf /etc/sysctl.conf
 RUN echo "oracle soft stack 10240" >> /etc/security/limits.conf
 
 ENV CVUQDISK_GRP oinstall
-RUN cd /tmp/install/database/rpm && rpm -iv cvuqdisk-1.0.9-1.rpm
+RUN cd /tmp/install/database/rpm && rpm -iv cvuqdisk-1.0.7-1.rpm
 
 ADD db_install.rsp /tmp/db_install.rsp
 ADD install /tmp/install/install
