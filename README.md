@@ -136,28 +136,25 @@ Should you want to modify & build your own image:
 
 6) ` # /tmp/install/install` (takes about 5m)
 ```
-Tue Sep 16 08:48:00 UTC 2014
+Wed Jul 22 16:29:58 UTC 2015
 Starting Oracle Universal Installer...
 
-Checking Temp space: must be greater than 500 MB.   Actual 40142 MB    Passed
-Checking swap space: must be greater than 150 MB.   Actual 1392 MB    Passed
-Preparing to launch Oracle Universal Installer from /tmp/OraInstall2014-09-16_08-48-01AM. Please wait ...[root@51905aa48207 /]# You can find the log of this install session at:
- /u01/app/oraInventory/logs/installActions2014-09-16_08-48-01AM.log
-The installation of Oracle Database 12c was successful.
-Please check '/u01/app/oraInventory/logs/silentInstall2014-09-16_08-48-01AM.log' for more details.
+Checking Temp space: must be greater than 120 MB.   Actual 125233 MB    Passed
+Checking swap space: must be greater than 150 MB.   Actual 6141 MB    Passed
+Preparing to launch Oracle Universal Installer from /tmp/OraInstall2015-07-22_04-29-58PM. Please wait ...[root@cf45cfa558d2 /]# You can find the log of this install session at:
+ /u01/app/oraInventory/logs/installActions2015-07-22_04-29-58PM.log
+The following configuration scripts need to be executed as the "root" user. 
+ #!/bin/sh 
+ #Root scripts to run
 
-As a root user, execute the following script(s):
-	1. /u01/app/oracle/product/12.1.0/dbhome_1/root.sh
-
-
+/u01/app/oracle/product/11.2.0/dbhome_1/root.sh
+To execute the configuration scripts:
+	 1. Open a terminal window 
+	 2. Log in as "root" 
+	 3. Run the scripts 
+	 4. Return to this window and hit "Enter" key to continue 
 
 Successfully Setup Software.
-As install user, execute the following script to complete the configuration.
-	1. /u01/app/oracle/product/12.1.0/dbhome_1/cfgtoollogs/configToolAllCommands RESPONSE_FILE=<response_file>
-
- 	Note:
-	1. This script must be run on the same host from where installer was run. 
-	2. This script needs a small password properties file for configuration assistants that require passwords (refer to install guide documentation).
 
 ```
 7) ` <enter>`
