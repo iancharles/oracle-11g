@@ -178,7 +178,7 @@ oracle.install.db.isRACOneInstall=false
 #------------------------------------------------------------------------------
 # Specify the name for RAC One Node Service.
 #------------------------------------------------------------------------------
-oracle.install.db.racOneServiceName=
+#oracle.install.db.racOneServiceName=
 
 #-------------------------------------------------------------------------------
 # Specify the type of database to create.
