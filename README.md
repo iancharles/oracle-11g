@@ -124,7 +124,7 @@ There's no ssh daemon or similar configured in the image. If you need a command 
 Should you want to modify & build your own image:
 
 #### Step 1
-1) Download `linuxamd64_12102_database_1of2.zip` & `linuxamd64_12102_database_2of2.zip` from [Oracle Tech Net](http://www.oracle.com/technetwork/database/enterprise-edition/downloads/database12c-linux-download-2240591.html)
+1) Download `linux.x64_11gR2_database_1of2.zip ` & `linux.x64_11gR2_database_2of2.zip ` from [Oracle Tech Net](http://www.oracle.com/technetwork/database/enterprise-edition/downloads/index.html)
 
 2) Put the 2 zip files in the `step1` directory
 
