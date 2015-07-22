@@ -104,7 +104,7 @@ ORACLE_BASE=/u01/app/oracle
 # SEONE  : Standard Edition One
 # PE     : Personal Edition (WINDOWS ONLY)
 #-------------------------------------------------------------------------------
-oracle.install.db.InstallEdition=SE
+oracle.install.db.InstallEdition=EE
 
 #-------------------------------------------------------------------------------
 # This variable is used to enable or disable custom install and is considered
